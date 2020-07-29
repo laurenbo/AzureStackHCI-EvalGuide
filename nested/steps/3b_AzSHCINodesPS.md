@@ -53,7 +53,7 @@ Once the VM is successfully created, you should connect the Azure Stack HCI ISO 
 ```powershell
 # Disable Dynamic Memory
 Set-VMMemory -VMName $nodeName -DynamicMemoryEnabled $false
-# Add the DVD drive, attach the ISO to DC01 and set the DVD as the first boot device
+# Add the DVD drive, attach the ISO file and set the DVD as the first boot device
 $DVD = Add-VMDvdDrive -VMName $nodeName -Path C:\ISO\AzSHCI.iso -Passthru
 Set-VMFirmware -VMName $nodeName -FirstBootDevice $DVD
 ```
